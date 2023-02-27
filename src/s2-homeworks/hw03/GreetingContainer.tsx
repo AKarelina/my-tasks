@@ -8,8 +8,8 @@ import {v1} from "uuid";
     addUserCallback: (name:string)=>void // need to fix any
 }
 
-export const pureAddUser = (name: string, setError: Function, setName: Function, addUserCallback: Function) => {
-    if(name.trim() === "") {
+export const pureAddUser = (name: string, setError: (error: string)=> void, setName: (name: string)=> void, addUserCallback: (name:string)=>void ) => {
+     if(name.trim() === "") {
         setError("Ошибка! Введите имя!")
     } else {
         addUserCallback(name)
@@ -18,14 +18,14 @@ export const pureAddUser = (name: string, setError: Function, setName: Function,
     // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
 }
 
-export const pureOnBlur = (name: string, setError: Function) => {
+export const pureOnBlur = (name: string, setError: (error: string)=> void) => {
     if(name.trim()===""){
         setError("Ошибка! Введите имя!")
     }
     // если имя пустое - показать ошибку
 }
 
-export const pureOnEnter = (e:KeyboardEvent<HTMLElement>, addUser: Function) => {
+export const pureOnEnter = (e:KeyboardEvent<HTMLElement>, addUser:()=>void) => {
     if(e.key === "Enter") {
         addUser()
     }

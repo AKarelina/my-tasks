@@ -32,6 +32,7 @@ const HW3 = () => {
     const [users, setUsers] = useState<Array<UserType>>([]) // need to fix any
 
     const addUserCallback = (name: string) => { // need to fix any
+
         pureAddUserCallback(name, setUsers, users)
     }
 

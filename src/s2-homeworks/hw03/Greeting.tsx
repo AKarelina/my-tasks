@@ -27,6 +27,7 @@ const Greeting: React.FC<GreetingPropsType> = (
 ) => {
     const inputClass = error? s.errorInput : s.input // need to fix with (?:)
 
+    const test = () => alert(1)
     return (
         <div id={'hw3-form'} className={s.greetingForm}>
             <hr/>
@@ -55,6 +56,7 @@ const Greeting: React.FC<GreetingPropsType> = (
                 <button
                     id={'hw3-button'}
                     onClick={addUser}
+                   // onClick={test}
                     className={s.button}
                     disabled={!name.trim()}
                 >
