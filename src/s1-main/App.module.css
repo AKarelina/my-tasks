@@ -4,8 +4,16 @@
 
 .hw {
 
+
 }
 
 .hwTitle {
-
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: black;
+    width: 169px;
+    height: 27px;
+    left: 70px;
+    top: 131px;
 }
